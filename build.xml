@@ -118,7 +118,7 @@
             <fileset dir="${team.build.dir}"/>
         </zip>
 
-        <echo message="***** TEAM COMPLITED ***** "/>
+        <echo message="***** TEAM COMPLITED *****l"/>
     </target>
 
     <target name="build-revision">
