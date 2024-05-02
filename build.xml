@@ -93,6 +93,7 @@
 
     <target name="team">
         <echo message="***** TEAM STARTED *****"/>
+        <delete dir="${team.build.dir}"/>
         <mkdir dir="${team.build.dir}"/>
 
         <antcall target="build-revision">
@@ -117,7 +118,7 @@
             <fileset dir="${team.build.dir}"/>
         </zip>
 
-        <echo message="***** TEAM COMPLITED *****"/>
+        <echo message="***** TEAM COMPLITED ***** "/>
     </target>
 
     <target name="build-revision">
