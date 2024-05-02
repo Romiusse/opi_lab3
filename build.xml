@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="webapp" default="build">
+    <property file="build.properties"/>
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <path id="classpath.source">
+        <fileset dir="${lib}" includes="*.jar"/>
+    </path>
+
+    <target name="compile">
+        <mkdir dir="${compiled.classes}"/>
+        <javac srcdir="${main}" destdir="${compiled.classes}" encoding="UTF-8">
+            <classpath>
+                <path refid="classpath.source"/>
+                <pathelement location="${compiled.classes}"/>
+            </classpath>
+        </javac>
+        <copy todir="${compiled.classes}">
+            <fileset dir="${meta-inf}"/>
+        </copy>
+        <mkdir dir="${compiled.tests}"/>
+        <javac srcdir="${test}" destdir="${compiled.tests}">
+            <classpath>
+                <path refid="classpath.source"/>
+                <pathelement location="${compiled.classes}"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <delete file="${file.jar}"/>
+        <mkdir dir="${webapp}"/>
+        <copy todir="${webapp}">
+            <fileset dir="${web}"/>
+        </copy>
+        <mkdir dir="${webInf.classes}"/>
+        <copy todir="${webInf.classes}">
+            <fileset dir="${compiled.classes}"/>
+        </copy>
+        <mkdir dir="${webInf.lib}"/>
+        <copy todir="${webInf.lib}">
+            <fileset dir="${lib}"/>
+        </copy>
+        <jar destfile="${file.jar}" basedir="${webapp}">
+            <manifest>
+                <attribute name="Version" value="1"/>
+                <attribute name="Author" value="Roman"/>
+                <attribute name="Manage-Bean" value="PointsBean"/>
+            </manifest>
+        </jar>
+        <war destfile="${file.war}" basedir="${webapp}">
+            <manifest>
+                <attribute name="Version" value="1"/>
+                <attribute name="Author" value="Roman"/>
+                <attribute name="Manage-Bean" value="PointsBean"/>
+            </manifest>
+        </war>
+    </target>
+
+    <target name="check-condition">
+        <available file="${target}" type="dir" property="check.status"/>
+    </target>
+
+    <target name="clean" depends="check-condition">
+        <if>
+            <equals arg1="${check.status}" arg2="true"/>
+            <then>
+                <delete dir="${target}"/>
+            </then>
+        </if>
+    </target>
+
+    <target name="test" depends="build">
+        <mkdir dir="${reports}"/>
+        <echo message="--- TEST DONE ---"/>
+        <junit fork="true" printsummary="on">
+            <formatter type="xml"/>
+            <classpath>
+                <path refid="classpath.source"/>
+                <pathelement location="${compiled.classes}"/>
+                <pathelement location="${compiled.tests}"/>
+            </classpath>
+            <batchtest todir="reports">
+                <fileset dir="${test2}" includes="*.java"/>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="team">
+        <echo message="***** TEAM STARTED *****"/>
+        <mkdir dir="${team.build.dir}"/>
+
+        <antcall target="build-revision">
+            <param name="link" value="HEAD"/>
+        </antcall>
+        <antcall target="build-revision">
+            <param name="link" value="HEAD~1"/>
+        </antcall>
+        <antcall target="build-revision">
+            <param name="link" value="HEAD~1"/>
+        </antcall>
+        <antcall target="build-revision">
+            <param name="link" value="HEAD~1"/>
+        </antcall>
+
+        <exec executable="git">
+            <arg value="checkout"/>
+            <arg value="master"/>
+        </exec>
+
+        <zip destfile="${team.build.dir}/team-build.zip">
+            <fileset dir="${team.build.dir}"/>
+        </zip>
+
+        <echo message="***** TEAM COMPLITED *****"/>
+    </target>
+
+    <target name="build-revision">
+        <property name="link" value="${link}"/>
+
+        <exec executable="git" outputproperty="revision">
+            <arg value="rev-parse"/>
+            <arg value="${link}"/>
+        </exec>
+
+        <exec executable="git">
+            <arg value="checkout"/>
+            <arg value="${revision}"/>
+        </exec>
+
+        <antcall target="build"/>
+
+        <copy todir="${team.build.dir}/${revision}">
+            <fileset dir="${target}" includes="*.jar"/>
+            <fileset dir="${target}" includes="*.war"/>
+        </copy>
+    </target>
+
+    <target name="music" depends="build">
+        <sound>
+            <success source="smb_stage_clear.wav"/>
+            <fail source="smb_mariodie.wav"/>
+        </sound>
+    </target>
+
+
+</project>
