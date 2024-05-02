@@ -92,7 +92,7 @@
     </target>
 
     <target name="team">
-        <echo message="***** TEAM STARTED *****"/>
+        <echo message="***** TEAM STARTED ******"/>
         <mkdir dir="${team.build.dir}"/>
 
         <antcall target="build-revision">
