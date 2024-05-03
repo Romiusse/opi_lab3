@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="LAPTOP-JSSNKNME" name="webLab3Tests" skipped="0" tests="12" time="0.416" timestamp="2024-05-02T22:22:31">
+<testsuite errors="0" failures="0" hostname="LAPTOP-JSSNKNME" name="webLab3Tests" skipped="0" tests="12" time="0.451" timestamp="2024-05-03T07:46:46">
   <properties>
     <property name="webapp" value="./target/webapp" />
     <property name="ant.library.dir" value="C:\Users\mreve\AppData\Roaming\JetBrains\IntelliJIdea2024.1\plugins\ant\dist\lib" />
@@ -11,33 +11,34 @@
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="sun.jnu.encoding" value="Cp1251" />
     <property name="webInf.classes" value="./target/webapp/WEB-INF/classes" />
-    <property name="java.class.path" value="C:\Users\mreve\Desktop\opi_lab3\lib\ant-contrib-1.0b3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\byte-buddy-1.12.8.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hamcrest-core-1.3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-commons-annotations-6.0.0.CR1.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-core-5.0.1.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-core-6.0.0.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-ehcache-5.2.6.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-entitymanager-5.0.1.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javaee-api-7.0.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javassist-3.18.1-GA.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javax.faces-2.2.10.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javax.servlet-api-3.0.1.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jboss-logging-3.4.3.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsf-api-2.2.18.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsf-impl-2.2.18.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsoup-1.14.3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsp-api-2.0.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jstl-1.2.jar;C:\Users\mreve\Desktop\opi_lab3\lib\junit-4.12.jar;C:\Users\mreve\Desktop\opi_lab3\lib\lombok-1.18.26.jar;C:\Users\mreve\Desktop\opi_lab3\lib\postgresql-42.2.14.jar;C:\Users\mreve\Desktop\opi_lab3\lib\primefaces-5.3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\slf4j-api-1.7.7.jar;C:\Users\mreve\Desktop\opi_lab3\lib\txw2-3.0.2.jar;C:\Users\mreve\Desktop\opi_lab3\lib\xml-apis-1.0.b2.jar;C:\Users\mreve\Desktop\opi_lab3\target\classes;C:\Users\mreve\Desktop\opi_lab3\target\tests;C:\Users\mreve\AppData\Roaming\JetBrains\IntelliJIdea2024.1\plugins\ant\dist\ant.jar" />
     <property name="ant.file.type.webapp" value="file" />
+    <property name="java.class.path" value="C:\Users\mreve\Desktop\opi_lab3\lib\ant-contrib-1.0b3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\byte-buddy-1.12.8.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hamcrest-core-1.3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-commons-annotations-6.0.0.CR1.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-core-5.0.1.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-core-6.0.0.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-ehcache-5.2.6.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-entitymanager-5.0.1.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javaee-api-7.0.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javassist-3.18.1-GA.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javax.faces-2.2.10.jar;C:\Users\mreve\Desktop\opi_lab3\lib\javax.servlet-api-3.0.1.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jboss-logging-3.4.3.Final.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsf-api-2.2.18.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsf-impl-2.2.18.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsoup-1.14.3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jsp-api-2.0.jar;C:\Users\mreve\Desktop\opi_lab3\lib\jstl-1.2.jar;C:\Users\mreve\Desktop\opi_lab3\lib\junit-4.12.jar;C:\Users\mreve\Desktop\opi_lab3\lib\lombok-1.18.26.jar;C:\Users\mreve\Desktop\opi_lab3\lib\postgresql-42.2.14.jar;C:\Users\mreve\Desktop\opi_lab3\lib\primefaces-5.3.jar;C:\Users\mreve\Desktop\opi_lab3\lib\slf4j-api-1.7.7.jar;C:\Users\mreve\Desktop\opi_lab3\lib\txw2-3.0.2.jar;C:\Users\mreve\Desktop\opi_lab3\lib\xml-apis-1.0.b2.jar;C:\Users\mreve\Desktop\opi_lab3\target\classes;C:\Users\mreve\Desktop\opi_lab3\target\tests;C:\Users\mreve\AppData\Roaming\JetBrains\IntelliJIdea2024.1\plugins\ant\dist\ant.jar" />
     <property name="main" value="./src/main" />
     <property name="java.vm.vendor" value="Amazon.com Inc." />
     <property name="meta-inf" value="./src/main/resources" />
     <property name="sun.arch.data.model" value="64" />
     <property name="user.variant" value="" />
     <property name="java.vendor.url" value="https://aws.amazon.com/corretto/" />
-    <property name="java.vm.specification.version" value="17" />
+    <property name="exit.code" value="1" />
     <property name="os.name" value="Windows 11" />
+    <property name="java.vm.specification.version" value="17" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="user.country" value="RU" />
     <property name="compiled.tests" value="./target/tests" />
     <property name="sun.boot.library.path" value="C:\Users\mreve\.jdks\corretto-17.0.11\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner webLab3Tests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\mreve\Desktop\opi_lab3\reports\TEST-webLab3Tests.xml crashfile=C:\Users\mreve\Desktop\opi_lab3\junitvmwatcher16053294596273568126.properties propsfile=C:\Users\mreve\Desktop\opi_lab3\junit13479777229875943539.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner webLab3Tests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\mreve\Desktop\opi_lab3\reports\TEST-webLab3Tests.xml crashfile=C:\Users\mreve\Desktop\opi_lab3\junitvmwatcher16756151295762981605.properties propsfile=C:\Users\mreve\Desktop\opi_lab3\junit17856486077550568043.properties" />
     <property name="jdk.debug" value="release" />
     <property name="ant.file.webapp" value="C:\Users\mreve\Desktop\opi_lab3\build.xml" />
-    <property name="test" value="./src/test" />
     <property name="localization.files.path" value="src/main/resources" />
+    <property name="test" value="./src/test" />
     <property name="sun.cpu.endian" value="little" />
     <property name="user.home" value="C:\Users\mreve" />
     <property name="user.language" value="ru" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="java.version.date" value="2024-04-16" />
     <property name="java.home" value="C:\Users\mreve\.jdks\corretto-17.0.11" />
-    <property name="file.separator" value="\" />
     <property name="basedir" value="C:\Users\mreve\Desktop\opi_lab3" />
+    <property name="file.separator" value="\" />
     <property name="java.vm.compressedOopsMode" value="Zero based" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="ant.java.version" value="17" />
@@ -62,8 +63,8 @@
     <property name="ant.core.lib" value="C:\Users\mreve\AppData\Roaming\JetBrains\IntelliJIdea2024.1\plugins\ant\dist\ant.jar" />
     <property name="file.war" value="./target/webapp.war" />
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/" />
-    <property name="webInf.lib" value="./target/webapp/WEB-INF/lib" />
     <property name="java.io.tmpdir" value="C:\Users\mreve\AppData\Local\Temp\" />
+    <property name="webInf.lib" value="./target/webapp/WEB-INF/lib" />
     <property name="java.version" value="17.0.11" />
     <property name="user.dir" value="C:\Users\mreve\Desktop\opi_lab3" />
     <property name="os.arch" value="amd64" />
@@ -73,8 +74,8 @@
     <property name="sun.os.patch.level" value="" />
     <property name="target" value="./target" />
     <property name="native.encoding" value="Cp1251" />
-    <property name="ant.version" value="Apache Ant(TM) version 1.10.14 compiled on August 16 2023" />
     <property name="test2" value="./src/test/java" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.14 compiled on August 16 2023" />
     <property name="java.library.path" value="C:\Users\mreve\.jdks\corretto-17.0.11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.4.101-hotspot\bin;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Users\mreve\AppData\Local\Programs\Python\Python310;C:\Users\mreve\AppData\Local\Programs\Python\Python310\Scripts;C:\Program Files\Git\cmd;C:\msys64\mingw64\bin;D:\Programs\matlab\bin;C:\Program Files\nodejs\;C:\Users\mreve\AppData\Local\Microsoft\WindowsApps;D:\Programs\Microsoft VS Code\bin;C:\Users\mreve\AppData\Local\Programs\Python\Python310;C:\Users\mreve\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\mreve\AppData\Roaming\npm;D:\Programs\IntelliJ IDEA 2023.1.3\bin;;." />
     <property name="java.vendor" value="Amazon.com Inc." />
     <property name="java.vm.info" value="mixed mode, sharing" />
@@ -85,17 +86,17 @@
     <property name="ant.project.default-target" value="build" />
   </properties>
   <testcase classname="webLab3Tests" name="checkFourthQuadrant" time="0.129" />
-  <testcase classname="webLab3Tests" name="addPoint" time="0.013" />
-  <testcase classname="webLab3Tests" name="testAxis" time="0.001" />
-  <testcase classname="webLab3Tests" name="removePoints" time="0.001" />
-  <testcase classname="webLab3Tests" name="checkThirdQuadrant" time="0.065" />
+  <testcase classname="webLab3Tests" name="addPoint" time="0.02" />
+  <testcase classname="webLab3Tests" name="testAxis" time="0.002" />
+  <testcase classname="webLab3Tests" name="removePoints" time="0.0" />
+  <testcase classname="webLab3Tests" name="checkThirdQuadrant" time="0.06" />
   <testcase classname="webLab3Tests" name="randomPoint" time="0.002" />
-  <testcase classname="webLab3Tests" name="nullPointFields" time="0.001" />
+  <testcase classname="webLab3Tests" name="nullPointFields" time="0.0" />
   <testcase classname="webLab3Tests" name="getPoints" time="0.0" />
   <testcase classname="webLab3Tests" name="checkFirstQuadrant" time="0.051" />
   <testcase classname="webLab3Tests" name="checkValidPoint" time="0.001" />
   <testcase classname="webLab3Tests" name="checkPointCreating" time="0.001" />
-  <testcase classname="webLab3Tests" name="checkSecondQuadrant" time="0.077" />
+  <testcase classname="webLab3Tests" name="checkSecondQuadrant" time="0.058" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
