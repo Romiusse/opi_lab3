@@ -148,5 +148,21 @@
         </sound>
     </target>
 
+    <target name="checkPR">
+        <echo message="***** CHECK PR *****"/>
+        <exec executable="powershell.exe" outputproperty="prExists">
+            <arg value="-file"/>
+            <arg value="git_pr_checker.ps1"/>
+        </exec>
+        <echo message="***** ${prExists} *****"/>
+        <if>
+            <equals arg1="${prExists}" arg2="true"/>
+            <then>
+                <antcall target="test"/>
+            </then>
+        </if>
+        <echo message="***** CHECK PR COMPLITED *****"/>
+    </target>
+
 
 </project>
