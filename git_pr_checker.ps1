@@ -10,6 +10,5 @@ if ($pullRequests){
         return $true
     }
 } else {
-    Write-Output "No open pull requests"
     return $false
 }

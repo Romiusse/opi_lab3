@@ -36,9 +36,9 @@ public class webLab3Tests {
 
     @Test
     public void checkPointCreating() {
-        Point newPoint = new Point((long) 100, 1.0, 2.0, 3.0, true, LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm:ss")), "100");
+        Point newPoint = new Point((long) 100, 2.0, 2.0, 3.0, true, LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm:ss")), "100");
         point.setId(100L);
-        point.setX(1.0);
+        point.setX(2.0);
         point.setY(2.0);
         point.setR(3.0);
         point.setResult(true);
